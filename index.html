@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+
+    Theme Name: Minimalism
+    Version: 1.1
+
+    Author: BETADELI
+    Author URI: http://www.betadeli.com/
+
+    © 2014-2017
+
+-->
+
+    <head>
+        {MobileAppHeaders}
+
+        <title>{Title}{block:SearchPage} &mdash; {lang:SearchResultCount results for SearchQuery}{block:NoSearchResults}{lang:No results for SearchQuery}{/block:NoSearchResults}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+        <link rel="stylesheet" href="http://static.tumblr.com/ehhhjdt/PVFnwo5ot/genericons.css">
+        <link rel="stylesheet" href="http://static.tumblr.com/ehhhjdt/UOenwo5n1/minimalism.css">
+
+        {block:Hidden}
+            <meta name="image:Logo" content="">
+            <meta name="image:Background" content="">
+
+            <meta name="color:Search Background" content="{AccentColor}">
+            <meta name="color:Search Text" content="{BackgroundColor}">
+            <meta name="color:Body Background" content="{BackgroundColor}">
+            <meta name="color:Body Text" content="{TitleColor}">
+            <meta name="color:Body Accent" content="{AccentColor}">
+            <meta name="color:Body Box Background" content="#fff">
+            <meta name="color:Footer Text" content="{TitleColor}">
+            <meta name="color:Footer Accent" content="{AccentColor}">
+
+            <meta name="font:Body" content="{TitleFont}"/>
+
+            <meta name="select:Page Font Size" content="1.4rem" title="Normal">
+            <meta name="select:Page Font Size" content="1.7rem" title="Large">
+            <meta name="select:Page Font Size" content="1.6rem" title="Larger">
+            <meta name="select:Page Font Size" content="1.5rem" title="Medium">
+            <meta name="select:Page Font Size" content="1.3rem" title="Small">
+            <meta name="select:Page Font Size" content="1.2rem" title="Smaller">
+            <meta name="select:Page Preloader" content="" title="None">
+            <meta name="select:Page Preloader" content="preload preloader-line" title="Bar">
+            <meta name="select:Page Preloader" content="preload preloader-spin" title="Spinner">
+            <meta name="select:Page Width" content="1200px" title="1200px">
+            <meta name="select:Page Width" content="initial" title="Full">
+            <meta name="select:Page Width" content="500px" title="500px">
+            <meta name="select:Page Width" content="600px" title="600px">
+            <meta name="select:Page Width" content="700px" title="700px">
+            <meta name="select:Page Width" content="800px" title="800px">
+            <meta name="select:Page Width" content="1000px" title="1000px">
+            <meta name="select:Page Width" content="1400px" title="1400px">
+            <meta name="select:Background Size" content="" title="Default">
+            <meta name="select:Background Size" content="contain" title="Contain">
+            <meta name="select:Background Size" content="cover" title="Cover">
+            <meta name="select:Background Overlay" content="" title="None">
+            <meta name="select:Background Overlay" content="overlay black-diagonal-line" title="Black Diagonal Line">
+            <meta name="select:Background Overlay" content="overlay black-horizontal-line" title="Black Horizontal Line">
+            <meta name="select:Background Overlay" content="overlay black-vertical-line" title="Black Vertical Line">
+            <meta name="select:Background Overlay" content="overlay black-dot-small" title="Black Dot Small">
+            <meta name="select:Background Overlay" content="overlay black-dot-large" title="Black Dot Large">
+            <meta name="select:Background Overlay" content="overlay white-diagonal-line" title="White Diagonal Line">
+            <meta name="select:Background Overlay" content="overlay white-horizontal-line" title="White Horizontal Line">
+            <meta name="select:Background Overlay" content="overlay white-vertical-line" title="White Vertical Line">
+            <meta name="select:Background Overlay" content="overlay white-dot-small" title="White Dot Small">
+            <meta name="select:Background Overlay" content="overlay white-dot-large" title="White Dot Large">
+            <meta name="select:Background Overlay Opacity" content="1" title="100%">
+            <meta name="select:Background Overlay Opacity" content="0.9" title="90%">
+            <meta name="select:Background Overlay Opacity" content="0.8" title="80%">
+            <meta name="select:Background Overlay Opacity" content="0.7" title="70%">
+            <meta name="select:Background Overlay Opacity" content="0.6" title="60%">
+            <meta name="select:Background Overlay Opacity" content="0.5" title="50%">
+            <meta name="select:Background Overlay Opacity" content="0.4" title="40%">
+            <meta name="select:Background Overlay Opacity" content="0.3" title="30%">
+            <meta name="select:Background Overlay Opacity" content="0.2" title="20%">
+            <meta name="select:Background Overlay Opacity" content="0.1" title="10%">
+            <meta name="select:Background Overlay Opacity" content="0" title="0%">
+            <meta name="select:Header Alignment" content="center" title="Center">
+            <meta name="select:Header Alignment" content="left" title="Left">
+            <meta name="select:Header Alignment" content="right" title="Right">
+            <meta name="select:Header Position" content="" title="Top">
+            <meta name="select:Header Position" content="header-left" title="Left">
+            <meta name="select:Header Position" content="header-right" title="Right">
+            <meta name="select:Header Avatar Max Height" content="128px" title="128px">
+            <meta name="select:Header Avatar Max Height" content="96px" title="96px">
+            <meta name="select:Header Avatar Max Height" content="64px" title="64px">
+            <meta name="select:Header Avatar Max Height" content="48px" title="48px">
+            <meta name="select:Header Avatar Max Height" content="32px" title="32px">
+            <meta name="select:Header Background Opacity" content="1" title="100%">
+            <meta name="select:Header Background Opacity" content="0.9" title="90%">
+            <meta name="select:Header Background Opacity" content="0.8" title="80%">
+            <meta name="select:Header Background Opacity" content="0.7" title="70%">
+            <meta name="select:Header Background Opacity" content="0.6" title="60%">
+            <meta name="select:Header Background Opacity" content="0.5" title="50%">
+            <meta name="select:Header Background Opacity" content="0.4" title="40%">
+            <meta name="select:Header Background Opacity" content="0.3" title="30%">
+            <meta name="select:Header Background Opacity" content="0.2" title="20%">
+            <meta name="select:Header Background Opacity" content="0.1" title="10%">
+            <meta name="select:Header Background Opacity" content="0" title="0%">
+            <meta name="select:Header Border Bottom Height" content="0px" title="0px">
+            <meta name="select:Header Border Bottom Height" content="1px" title="1px">
+            <meta name="select:Header Border Bottom Height" content="2px" title="2px">
+            <meta name="select:Header Border Bottom Height" content="3px" title="3px">
+            <meta name="select:Header Border Bottom Height" content="4px" title="4px">
+            <meta name="select:Header Border Bottom Height" content="5px" title="5px">
+            <meta name="select:Header Border Bottom Height" content="6px" title="6px">
+            <meta name="select:Header Border Bottom Height" content="8px" title="8px">
+            <meta name="select:Header Border Bottom Height" content="10px" title="10px">
+            <meta name="select:Header Description Font Size" content="inherit" title="Normal">
+            <meta name="select:Header Description Font Size" content="large" title="Large">
+            <meta name="select:Header Description Font Size" content="larger" title="Larger">
+            <meta name="select:Header Description Font Size" content="medium" title="Medium">
+            <meta name="select:Header Description Font Size" content="small" title="Small">
+            <meta name="select:Header Description Font Size" content="smaller" title="Smaller">
+            <meta name="select:Header Image Opacity" content="1" title="100%">
+            <meta name="select:Header Image Opacity" content="0.9" title="90%">
+            <meta name="select:Header Image Opacity" content="0.8" title="80%">
+            <meta name="select:Header Image Opacity" content="0.7" title="70%">
+            <meta name="select:Header Image Opacity" content="0.6" title="60%">
+            <meta name="select:Header Image Opacity" content="0.5" title="50%">
+            <meta name="select:Header Image Opacity" content="0.4" title="40%">
+            <meta name="select:Header Image Opacity" content="0.3" title="30%">
+            <meta name="select:Header Image Opacity" content="0.2" title="20%">
+            <meta name="select:Header Image Opacity" content="0.1" title="10%">
+            <meta name="select:Header Image Opacity" content="0" title="0%">
+            <meta name="select:Navigation Font Size" content="inherit" title="Normal">
+            <meta name="select:Navigation Font Size" content="large" title="Large">
+            <meta name="select:Navigation Font Size" content="larger" title="Larger">
+            <meta name="select:Navigation Font Size" content="medium" title="Medium">
+            <meta name="select:Navigation Font Size" content="small" title="Small">
+            <meta name="select:Navigation Font Size" content="smaller" title="Smaller">
+            <meta name="select:Search Position" content="left" title="Left">
+            <meta name="select:Search Position" content="right" title="Right">
+            <meta name="select:Body Box Background Opacity" content="1" title="100%">
+            <meta name="select:Body Box Background Opacity" content="0.9" title="90%">
+            <meta name="select:Body Box Background Opacity" content="0.8" title="80%">
+            <meta name="select:Body Box Background Opacity" content="0.7" title="70%">
+            <meta name="select:Body Box Background Opacity" content="0.6" title="60%">
+            <meta name="select:Body Box Background Opacity" content="0.5" title="50%">
+            <meta name="select:Body Box Background Opacity" content="0.4" title="40%">
+            <meta name="select:Body Box Background Opacity" content="0.3" title="30%">
+            <meta name="select:Body Box Background Opacity" content="0.2" title="20%">
+            <meta name="select:Body Box Background Opacity" content="0.1" title="10%">
+            <meta name="select:Body Box Background Opacity" content="0" title="0%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.9" title="90%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.8" title="80%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.7" title="70%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.6" title="60%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.5" title="50%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.4" title="40%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.3" title="30%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.2" title="20%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0.1" title="10%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="0" title="0%">
+            <meta name="select:Body Box Photo Meta Overlay Opacity" content="1" title="100%">
+            <meta name="select:Body Grid Columns" content="cs-3" title="3">
+            <meta name="select:Body Grid Columns" content="cs-1" title="1">
+            <meta name="select:Body Grid Columns" content="cs-2" title="2">
+            <meta name="select:Body Grid Columns" content="cs-4" title="4">
+            <meta name="select:Body Grid Columns" content="cs-5" title="5">
+            <meta name="select:Body Grid Spacing" content="12px" title="24px">
+            <meta name="select:Body Grid Spacing" content="0px" title="0px">
+            <meta name="select:Body Grid Spacing" content="1px" title="2px">
+            <meta name="select:Body Grid Spacing" content="2px" title="4px">
+            <meta name="select:Body Grid Spacing" content="3px" title="6px">
+            <meta name="select:Body Grid Spacing" content="4px" title="8px">
+            <meta name="select:Body Grid Spacing" content="5px" title="10px">
+            <meta name="select:Body Grid Spacing" content="6px" title="12px">
+            <meta name="select:Body Grid Spacing" content="24px" title="48px">
+
+            <meta name="if:Header Description Uppercase" content="1">
+            <meta name="if:Header Full" content="">
+            <meta name="if:Header Image In Background" content="">
+            <meta name="if:Header Image Sliding" content="1">
+            <meta name="if:Navigation Sticky" content="1">
+            <meta name="if:Navigation Uppercase" content="1">
+            <meta name="if:Body Full" content="">
+            <meta name="if:Body Full On Mobile" content="1">
+            <meta name="if:Body Box Grayscale" content="">
+            <meta name="if:Body Box Meta Faded" content="">
+            <meta name="if:Body Box Photo HighRes" content="">
+            <meta name="if:Body Box Photo Meta Overlay" content="1">
+            <meta name="if:Body Box Photo Minimal" content="">
+            <meta name="if:Body Box Photo Minimal on Mobile" content="">
+            <meta name="if:Body Box Photoset Contained" content="1">
+            <meta name="if:Body Box Photoset Native" content="">
+            <meta name="if:Body Box Photoset Stacked" content="1">
+            <meta name="if:Hide Origin" content="">
+            <meta name="if:Hide Tags" content="">
+            <meta name="if:Show Archive Link" content="">
+            <meta name="if:Show Random Link" content="">
+            <meta name="if:Show Search" content="">
+            <meta name="if:Infinite Scrolling" content="1">
+
+            <meta name="text:URL Facebook" content="">
+            <meta name="text:URL Google Plus" content="">
+            <meta name="text:URL Instagram" content="">
+            <meta name="text:URL LinkedIn" content="">
+            <meta name="text:URL Twitter" content="">
+            <meta name="text:URL Vimeo" content="">
+            <meta name="text:URL YouTube" content="">
+            <meta name="text:URL Dribbble" content="">
+            <meta name="text:URL Flickr" content="">
+            <meta name="text:URL GitHub" content="">
+            <meta name="text:URL Pinterest" content="">
+            <meta name="text:URL Website" content="http://betadeli.com">
+
+            <meta name="text:Disqus Shortname" content="">
+
+            <meta name="text:Google Analytics ID" content="">
+        {/block:Hidden}
+
+        <style>
+            {block:IfHeaderFull}
+                html,
+                body {
+                    height: 100%;
+                }
+            {/block:IfHeaderFull}
+
+            body {
+                font-family: {font:Body};
+                font-size: {select:Page Font Size};
+                color: {color:Body Text};
+                background-color: {color:Body Background};
+                {block:IfBackgroundImage}
+                    background-image: url({image:Background});
+                {/block:IfBackgroundImage}
+            }
+
+            a {
+                color: {color:Body Accent};
+            }
+
+
+            ::selection {
+                color: {color:Body Text};
+                background-color: {color:Body Background};
+            }
+
+            ::-moz-selection {
+                color: {color:Body Text};
+                background-color: {color:Body Background};
+            }
+
+
+            ::-webkit-input-placeholder {
+                color: {color:Body Text};
+            }
+
+            ::-moz-placeholder {
+                color: {color:Body Text};
+            }
+
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px white inset;
+                -webkit-text-fill-color: {color:Body Text};
+            }
+
+
+            .preload.preloader-line:after {
+                border-bottom-color: {AccentColor};
+            }
+
+            .preload.preloader-spin:before {
+                background-color: {color:Body Background};
+            }
+
+
+            .grid {
+                margin: -{select:Body Grid Spacing};
+            }
+
+            .grid > .item {
+                padding: {select:Body Grid Spacing};
+            }
+
+
+            .overlay {
+                opacity: {select:Background Overlay Opacity};
+            }
+
+
+            .item .box {
+                background-color: rgba({RGBcolor:Body Box Background}, {select:Body Box Background Opacity});
+            }
+
+            .item .box .media .click-through {
+                color: {color:Body Box Background};
+                background-color: {color:Body Accent};
+            }
+
+            .item .box .caption blockquote,
+            .item .box .body blockquote,
+            .item.answer .box .body .answer,
+            .item.answer .box .body .replies  {
+                border-color: rgba({RGBcolor:Body Accent}, .7);
+            }
+
+            .item .box .meta .origin .reblogged-from svg,
+            .item .box .meta .actions .reblog svg,
+            .item .box .meta .actions .like svg {
+                fill: {color:Body Accent};
+            }
+
+            {block:IndexPage}
+                @media screen and (min-width: 1000px) {
+                    body.index .item.photo .box.meta-overlay .meta {
+                        -webkit-box-shadow: inset 0 -160px 40px -40px rgba({RGBcolor:Body Box Background}, {select:Body Box Photo Meta Overlay Opacity});
+                        -moz-box-shadow: inset 0 -160px 40px -40px rgba({RGBcolor:Body Box Background}, {select:Body Box Photo Meta Overlay Opacity});
+                        box-shadow: inset 0 -160px 40px -40px rgba({RGBcolor:Body Box Background}, {select:Body Box Photo Meta Overlay Opacity});
+                    }
+                }
+
+                {block:IfBodyBoxPhotosetContained}
+                    body.index .item.photo .box .media[data-count] a[style]:not(:first-of-type) {
+                        border-color: {color:Body Box Background};
+                    }
+                {/block:IfBodyBoxPhotosetContained}
+            {/block:IndexPage}
+
+
+            #header {
+                font-family: {TitleFont};
+                color: {TitleColor};
+                background-color: rgba({RGBBackgroundColor}, {select:Header Background Opacity});
+                border-bottom: {select:Header Border Bottom Height} solid {AccentColor};
+            }
+
+            #header a {
+                color: {AccentColor};
+            }
+
+            #header .title a {
+                font-weight: {TitleFontWeight};
+                color: {TitleColor};
+            }
+
+
+            #header .header {
+                text-align: {block:IfHeaderFull}center{/block:IfHeaderFull}{block:IfNotHeaderFull}{select:Header Alignment}{/block:IfNotHeaderFull};
+            }
+
+            #header .header .content .heading .logo,
+            #header .header .content .heading .avatar {
+                max-height: {select:Header Avatar Max Height};
+            }
+
+            #header .header .content .heading .avatar {
+                max-width: {select:Header Avatar Max Height};
+            }
+
+            #header .header .content .heading .logo,
+            #header .header .content .heading .avatar,
+            #header .header .image {
+                background-position: {block:IfHeaderFull}center{/block:IfHeaderFull}{block:IfNotHeaderFull}{select:Header Alignment}{/block:IfNotHeaderFull} center;
+            }
+
+
+            {block:IfLogoImage}
+                #header .header .content .heading .logo {
+                    background-image: url({image:Logo});
+                }
+            {/block:IfLogoImage}
+
+            {block:IfNotLogoImage}
+                {block:ShowAvatar}
+                    #header .header .content .heading .avatar {
+                        background-image: url({PortraitURL-128});
+                    }
+                {/block:ShowAvatar}
+            {/block:IfNotLogoImage}
+
+
+            {block:IfHeaderDescriptionUppercase}
+                #header .header .content .heading .description {
+                    text-transform: uppercase;
+                }
+            {/block:IfHeaderDescriptionUppercase}
+
+            #header .header .content .heading .description {
+                font-size: {select:Header Description Font Size};
+            }
+
+            #header .header .content .navigation-holder .navigation .menu {
+                font-size: {select:Navigation Font Size};
+            }
+
+
+            {block:IfNavigationSticky}
+                @media screen and (min-width: 500px) {
+                    #header .header .content .navigation-holder.sticky .navigation {
+                        background-color: {BackgroundColor};
+                    }
+                }
+            {/block:IfNavigationSticky}
+
+
+            {block:IfNavigationUppercase}
+                #header .header .content .navigation-holder .navigation,
+                #header .header .content .navigation-holder .navigation input {
+                    text-transform: uppercase;
+                }
+            {/block:IfNavigationUppercase}
+
+
+            #header .header .content .navigation .search .query {
+                color: {color:Search Text};
+                background-color: {color:Search Background};
+            }
+
+            #header .header .content .navigation .search .submit {
+                color: {color:Search Background};
+            }
+            #header .header .content .navigation .search:hover .submit {
+                color: {color:Search Text};
+            }
+
+            #header .header .content .navigation .search input:-webkit-autofill {
+                -webkit-text-fill-color: {color:Search Text};
+            }
+
+            #header .header .content .navigation .search ::-webkit-input-placeholder {
+                color: {color:Search Text};
+            }
+
+            #header .header .content .navigation .search ::-moz-placeholder {
+                color: {color:Search Text};
+            }
+
+
+            {block:ShowHeaderImage}
+                #header .header .image {
+                    background-image: url({HeaderImage});
+                    opacity: {select:Header Image Opacity};
+                }
+            {/block:ShowHeaderImage}
+
+
+            #footer {
+                color: {color:Footer Text};
+                border-top: 1px solid rgba({RGBcolor:Footer Accent}, .1);
+            }
+
+            #footer a {
+                color: {color:Footer Accent};
+            }
+
+
+            #header .header .content,
+            #header .header .content .navigation-holder.sticky .navigation .navigation-wrapper,
+            #content,
+            #footer .footer {
+                max-width: {select:Page Width};
+            }
+
+            {block:PermalinkPage}
+                #content {
+                    max-width: 700px;
+                }
+
+                body.permalink .grid > .item,
+                body.permalink .grid > .item-sizer {
+                    width: 100%;
+                }
+            {/block:PermalinkPage}
+
+
+            #tumblr_lightbox a:hover {
+                opacity: 1;
+            }
+
+            .tmblr-iframe--controls.iframe-controls--phone-mobile,
+            .tmblr-iframe--mobile-logged-in-controls.iframe-controls--phone-mobile {
+                padding: 0 !important;
+            }
+
+            {CustomCSS}
+        </style>
+
+        {block:IfGoogleAnalyticsID}
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                ga('create', '{text:Google Analytics ID}', 'auto');
+                ga('require', 'displayfeatures');
+                ga('send', 'pageview');
+            </script>
+        {/block:IfGoogleAnalyticsID}
+
+    </head>
+
+    <body class="{select:Page Preloader} {select:Background Size}{select:Header Position}{block:IndexPage} index{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}">
+
+        <main id="page">
+
+            <header id="header" class="{block:IfHeaderFull} center full{/block:IfHeaderFull}{block:IfNotHeaderFull}{select:Header Alignment}{/block:IfNotHeaderFull}">
+
+                <div class="header">
+
+                    {block:ShowHeaderImage}
+                        <aside class="image{block:StretchHeaderImage} cover{/block:StretchHeaderImage}{block:IfHeaderImageInBackground} in-background{/block:IfHeaderImageInBackground}{block:IfNotHeaderImageInBackground}{block:IfHeaderFull} in-background{/block:IfHeaderFull}{/block:IfNotHeaderImageInBackground}{block:IfNotHeaderImageInBackground}{block:IfNotHeaderFull}{block:PermalinkPage} in-background{/block:PermalinkPage}{/block:IfNotHeaderFull}{/block:IfNotHeaderImageInBackground}">
+                            <img src="{HeaderImage}"/>
+                        </aside>
+                    {/block:ShowHeaderImage}
+
+                    <section class="content">
+
+                        <hgroup class="heading">
+                            {block:IfLogoImage}
+                                <h1><a class="logo" href="{BlogURL}" title="{Title}" target="_self"><img src="{image:Logo}"/></a></h1>
+                            {/block:IfLogoImage}
+                            {block:IfNotLogoImage}
+                                {block:ShowAvatar}
+                                    <h1><a class="avatar {AvatarShape}" href="{BlogURL}" title="{Title}" target="_self"><img src="{PortraitURL-128}"/></a></h1>
+                                {/block:ShowAvatar}
+                            {/block:IfNotLogoImage}
+                            {block:ShowDescription}
+                                {block:Description}
+                                    <h2 class="description">{Description}</h2>
+                                {/block:Description}
+                            {/block:ShowDescription}
+                        </hgroup>
+
+                        <div class="navigation-holder">
+                            <nav class="navigation{block:IfShowSearch} search-{select:Search Position}{/block:IfShowSearch}">
+                                <div class="navigation-wrapper">
+                                    <button class="toggle genericon genericon-menu {block:IfNotLogoImage}{block:ShowAvatar}float{/block:ShowAvatar}{/block:IfNotLogoImage}{block:IfLogoImage}float{/block:IfLogoImage}"></button>
+                                    <ul class="menu">
+                                        {block:IfShowSearch}
+                                            <li class="search-holder">
+                                                <form class="search" action="/search" method="get">
+                                                    <input class="query" type="search" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/>
+                                                    <button class="submit genericon genericon-search" type="submit" title="{lang:Search}"></button>
+                                                </form>
+                                            </li>
+                                        {/block:IfShowSearch}
+                                        {block:ShowTitle}
+                                            <li>
+                                                <h1 class="title"><a href="{BlogURL}">{Title}</a></h1>
+                                            </li>
+                                        {/block:ShowTitle}
+                                        {block:HasPages}
+                                            {block:Pages}
+                                                <li><a class="page" href="{URL}">{Label}</a></li>
+                                            {/block:Pages}
+                                        {/block:HasPages}
+                                        {block:IfShowArchiveLink}
+                                            <li><a class="archive" href="/archive">{lang:Archive}</a></li>
+                                        {/block:IfShowArchiveLink}
+                                        {block:AskEnabled}
+                                            <li><a class="ask" href="/ask">{AskLabel}</a></li>
+                                        {/block:AskEnabled}
+                                        {block:SubmissionsEnabled}
+                                            <li><a class="submit" href="/submit">{SubmitLabel}</a></li>
+                                        {/block:SubmissionsEnabled}
+                                        {block:IfShowRandomLink}
+                                            <li><a class="random" href="/random">{lang:Random}</a></li>
+                                        {/block:IfShowRandomLink}
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </header>
+
+            <section id="content">
+
+                {block:SearchPage}
+                    <h2 class="heading">
+                        {lang:SearchResultCount results for SearchQuery 2}
+                        {block:NoSearchResults}{lang:No results for SearchQuery 2}{/block:NoSearchResults}
+                    </h2>
+                {/block:SearchPage}
+                {block:TagPage}
+                    <h2 class="heading">
+                        {lang:TagResultCount posts tagged Tag 2}
+                    </h2>
+                {/block:TagPage}
+                {block:DayPage}
+                    <h2 class="heading">
+                        {lang:Posted on DayOfWeek DayOfMonth Month Year 2}
+                    </h2>
+                {/block:DayPage}
+
+                <section class="items{block:IfBodyFull} full{/block:IfBodyFull}{block:IfBodyFullOnMobile} full-on-mobile{/block:IfBodyFullOnMobile}{block:NoSearchResults} empty{/block:NoSearchResults}">
+
+                    <div class="grid {select:Body Grid Columns}">
+
+                        <div class="item-sizer"></div>
+
+                        {block:Posts}
+                            <article {block:Date}id="{PostID}"{/block:Date} class="item {PostType}">
+
+                                <div class="box{block:IfBodyBoxGrayscale} grayscale{/block:IfBodyBoxGrayscale}{block:IfBodyBoxPhotoMinimal} minimal{/block:IfBodyBoxPhotoMinimal}{block:IfBodyBoxPhotoMinimalOnMobile} minimal-on-mobile{/block:IfBodyBoxPhotoMinimalOnMobile}{block:IfBodyBoxPhotoMetaOverlay} meta-overlay{/block:IfBodyBoxPhotoMetaOverlay}{block:IfBodyBoxMetaFaded} meta-faded{/block:IfBodyBoxMetaFaded}{block:IfBodyBoxPhotosetStacked} photoset-stacked{block:IfBodyBoxPhotosetStacked}{block:IfBodyBoxPhotosetNative} photoset-native{/block:IfBodyBoxPhotosetNative}">
+
+                                    {block:Text}
+                                        {block:Title}<h3 class="title"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                                        {block:Body}<div class="body">{Body}</div>{/block:Body}
+                                    {/block:Text}
+
+                                    {block:Photo}
+                                        <div class="media">
+                                            {block:IndexPage}
+                                                <a href="{Permalink}"><img src="{block:IfBodyBoxPhotoHighRes}{PhotoURL-HighRes}{/block:IfBodyBoxPhotoHighRes}{block:IfNotBodyBoxPhotoHighRes}{PhotoURL-500}{/block:IfNotBodyBoxPhotoHighRes}" alt="{PhotoAlt}"/></a>
+                                            {/block:IndexPage}
+                                            {block:PermalinkPage}
+                                                <a href="{BlogURL}image/{PostID}" onclick="event.preventDefault(); return Tumblr.Lightbox.init([{'width': '{PhotoWidth-HighRes}', 'height': '{PhotoHeight-HighRes}', 'low_res': '{PhotoURL-500}', 'high_res': '{PhotoURL-HighRes}'}], 1);"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+                                            {/block:PermalinkPage}
+                                            {block:LinkURL}<a class="click-through genericon genericon-link" target="_blank" href="{LinkURL}"></a>{/block:LinkURL}
+                                        </div>
+                                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {/block:Photo}
+
+                                    {block:Panorama}
+                                        <div class="media">
+                                            {block:IndexPage}
+                                                <a href="{Permalink}"><img src="{block:IfBodyBoxPhotoHighRes}{PhotoURL-Panorama}{/block:IfBodyBoxPhotoHighRes}{block:IfNotBodyBoxPhotoHighRes}{PhotoURL-500}{/block:IfNotBodyBoxPhotoHighRes}" alt="{PhotoAlt}"/></a>
+                                            {/block:IndexPage}
+                                            {block:PermalinkPage}
+                                                <a href="{BlogURL}image/{PostID}" onclick="event.preventDefault(); return Tumblr.Lightbox.init([{'width': '{PhotoWidth-Panorama}', 'height': '{PhotoHeight-Panorama}', 'low_res': '{PhotoURL-500}', 'high_res': '{PhotoURL-Panorama}'}], 1);"><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/></a>
+                                            {/block:PermalinkPage}
+                                            {block:LinkURL}<a class="click-through genericon genericon-link" target="_blank" href="{LinkURL}"></a>{/block:LinkURL}
+                                        </div>
+                                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {/block:Panorama}
+
+                                    {block:Photoset}
+                                        <div class="media" data-count="{PhotoCount}" data-layout="{PhotosetLayout}">
+                                            {block:IndexPage}
+                                                {block:IfBodyBoxPhotosetNative}
+                                                    {Photoset}
+                                                {/block:IfBodyBoxPhotosetNative}
+                                                {block:IfNotBodyBoxPhotosetNative}
+                                                    {block:Photos}
+                                                        {block:IfBodyBoxPhotosetContained}
+                                                            <a href="{Permalink}" style="background-image: url({block:IfBodyBoxPhotoHighRes}{PhotoURL-HighRes}{/block:IfBodyBoxPhotoHighRes}{block:IfNotBodyBoxPhotoHighRes}{PhotoURL-500}{/block:IfNotBodyBoxPhotoHighRes});"><img src="{block:IfBodyBoxPhotoHighRes}{PhotoURL-HighRes}{/block:IfBodyBoxPhotoHighRes}{block:IfNotBodyBoxPhotoHighRes}{PhotoURL-500}{/block:IfNotBodyBoxPhotoHighRes}" alt="{PhotoAlt}"/></a>
+                                                        {/block:IfBodyBoxPhotosetContained}
+                                                        {block:IfNotBodyBoxPhotosetContained}
+                                                            <a href="{Permalink}"><img src="{block:IfBodyBoxPhotoHighRes}{PhotoURL-HighRes}{/block:IfBodyBoxPhotoHighRes}{block:IfNotBodyBoxPhotoHighRes}{PhotoURL-500}{/block:IfNotBodyBoxPhotoHighRes}" alt="{PhotoAlt}"/></a>
+                                                        {/block:IfNotBodyBoxPhotosetContained}
+                                                    {/block:Photos}
+                                                {/block:IfNotBodyBoxPhotosetNative}
+                                            {/block:IndexPage}
+                                            {block:PermalinkPage}
+                                                {block:Photos}
+                                                    <a href="{PhotoURL-HighRes}" onclick="event.preventDefault(); return Tumblr.Lightbox.init([{'width': '{PhotoWidth-HighRes}', 'height': '{PhotoHeight-HighRes}', 'low_res': '{PhotoURL-500}', 'high_res': '{PhotoURL-HighRes}'}], 1);"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+                                                {/block:Photos}
+                                            {/block:PermalinkPage}
+                                        </div>
+                                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {/block:Photoset}
+
+                                    {block:Quote}
+                                        <div class="body">
+                                            <blockquote data-length="{Length}">{Quote}</blockquote>
+                                            {block:Source}<div class="source">{Source}</div>{/block:Source}
+                                        </div>
+                                    {/block:Quote}
+
+                                    {block:Link}
+                                        {block:Thumbnail}
+                                            <div class="media">
+                                                <a {Target} href="{URL}"><img src="{Thumbnail}"/></a>
+                                            </div>
+                                        {/block:Thumbnail}
+                                        <h3 class="title"><a {Target} href="{URL}">{Name}</a></h3>
+                                        {block:Description}<div class="body">{Description}</div>{/block:Description}
+                                    {/block:Link}
+
+                                    {block:Chat}
+                                        {block:Title}<h3 class="title"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                                        <div class="body">
+                                            <ul>
+                                                {block:Lines}
+                                                    <li class="line {Alt}">
+                                                        {block:Label}
+                                                            <span class="label">{Label}</span>
+                                                        {/block:Label}
+                                                        <span class="text">{Line}</span>
+                                                    </li>
+                                                {/block:Lines}
+                                            </ul>
+                                        </div>
+                                    {/block:Chat}
+
+                                    {block:Audio}
+                                        <div class="media">
+                                            {block:AudioEmbed}
+                                                {block:IndexPage}
+                                                    {AudioEmbed-500}
+                                                {/block:IndexPage}
+                                                {block:PermalinkPage}
+                                                    {AudioEmbed-640}
+                                                {/block:PermalinkPage}
+                                            {/block:AudioEmbed}
+                                            {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+                                            {block:ExternalAudio}{ExternalAudioURL}{/block:ExternalAudio}
+                                        </div>
+                                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {/block:Audio}
+
+                                    {block:Video}
+                                        <div class="media">
+                                            {block:IndexPage}
+                                                {Video-500}
+                                            {/block:IndexPage}
+                                            {block:PermalinkPage}
+                                                {VideoEmbed-700}
+                                            {/block:PermalinkPage}
+                                        </div>
+                                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                                    {/block:Video}
+
+                                    {block:Answer}
+                                        <div class="body">
+                                            <div class="question">
+                                                {lang:Asker asked 2}:<p>{Question}</p>
+                                            </div>
+                                            {block:Answerer}
+                                                <div class="answer">
+                                                    {Answerer}:{Answer}
+                                                </div>
+                                            {/block:Answerer}
+                                            <div class="replies">
+                                                {Replies}
+                                            </div>
+                                        </div>
+                                    {/block:Answer}
+
+                                    {block:Date}
+                                        <div class="meta">
+
+                                            {block:HasTags}
+                                                <ul class="tags{block:IndexPage}{block:IfHideTags} hide{/block:IfHideTags}{/block:IndexPage}">
+                                                    {block:Tags}
+                                                        <li>
+                                                            <a href="{TagURL}">{Tag}</a>
+                                                        </li>
+                                                    {/block:Tags}
+                                                </ul>
+                                            {/block:HasTags}
+
+                                            <ul class="origin{block:IndexPage}{block:IfHideOrigin} hide{/block:IfHideOrigin}{/block:IndexPage}">
+                                                {block:Submission}
+                                                    <li class="submitter"><a target="_blank" href="{SubmitterURL}">{lang:By PostAuthorName}</a></li>
+                                                {/block:Submission}
+                                                {block:RebloggedFrom}
+                                                    <li class="reblogged-from"><a target="_blank" href="{ReblogParentURL}"><svg width="12px" height="12px" viewBox="0 0 21 21" fill="#000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg>{ReblogParentName}</a></li>
+                                                {/block:RebloggedFrom}
+                                                {block:ContentSource}
+                                                    <li class="source"><a target="_blank" href="{SourceURL}">{lang:Source}: {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></li>
+                                                {/block:ContentSource}
+                                            </ul>
+
+                                            <ul class="actions">
+                                                <li class="info"><a href="{Permalink}" title="{TimeAgo}">{lang:TimeAgo with NoteCount notes and PlayCount plays}</a></li>
+                                                <li class="reblog">{ReblogButton size="16" color="black"}</li>
+                                                <li class="like">{LikeButton size="16" color="black"}<svg width="16px" height="16px" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path></svg></li>
+                                            </ul>
+
+                                        </div>
+                                    {/block:Date}
+
+                                </div>
+
+                                {block:PermalinkPage}
+
+                                    {block:PostNotes}
+                                        {PostNotes-64}
+                                    {/block:PostNotes}
+
+                                    {block:Date}
+                                        {block:IfDisqusShortname}
+                                            <section class="comments">
+                                                <div id="disqus_thread"></div>
+                                                <script type="text/javascript">
+                                                    (function() {
+                                                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                        dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+                                                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                                    })();
+                                                </script>
+                                                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+                                                {lang:Blog comments powered by Disqus 2}
+                                            </section>
+                                        {/block:IfDisqusShortname}
+                                    {/block:Date}
+
+                                {/block:PermalinkPage}
+
+                            </article>
+                        {/block:Posts}
+
+                    </div>
+
+                </section>
+
+                {block:Pagination}
+                    <section class="pagination">
+
+                        <a class="loader" href="#" data-text="{lang:Load more posts}"></a>
+
+                        <div class="pages">
+                            {block:PreviousPage}
+                                <a class="previous" href="{PreviousPage}" title="{lang:Previous page}"><span class="genericon genericon-previous"></span></a>
+                            {/block:PreviousPage}
+                            {block:JumpPagination length="5"}
+                                {block:CurrentPage}
+                                    <a class="current">{PageNumber}</a>
+                                {/block:CurrentPage}
+                                {block:JumpPage}
+                                    <a href="{URL}">{PageNumber}</a>
+                                {/block:JumpPage}
+                            {/block:JumpPagination}
+                            {block:NextPage}
+                                <a class="next" href="{NextPage}" title="{lang:Next page}"><span class="genericon genericon-next"></span></a>
+                            {/block:NextPage}
+                        </div>
+
+                    </section>
+                {/block:Pagination}
+                {block:PermalinkPagination}
+                    <section class="pagination">
+
+                        <div class="posts">
+                            {block:PreviousPost}
+                                <a class="previous" href="{PreviousPost}" title="{lang:Previous post}"><span class="genericon genericon-previous"></span> {lang:Prev}</a>
+                            {/block:PreviousPost}
+                            {block:NextPost}
+                                <a class="next" href="{NextPost}" title="{lang:Next post}">{lang:Next} <span class="genericon genericon-next"></span></a>
+                            {/block:NextPost}
+                        </div>
+
+                    </section>
+                {/block:PermalinkPagination}
+                {block:DayPagination}
+                    <section class="pagination">
+
+                        <div class="days">
+                            {block:PreviousDayPage}
+                                <a class="previous" href="{PreviousDayPage}" title="{lang:Previous day}"><span class="genericon genericon-previous"></span> {DayOfMonthWithZero} &mdash; {MonthNumberWithZero} &mdash; {Year}</a>
+                            {/block:PreviousDayPage}
+                            {block:NextDayPage}
+                                <a class="next" href="{NextDayPage}" title="{lang:Next day}">{Year} &mdash; {MonthNumberWithZero} &mdash; {DayOfMonthWithZero} <span class="genericon genericon-next"></span></a>
+                            {/block:NextDayPage}
+                        </div>
+
+                    </section>
+                {/block:DayPagination}
+
+            </section>
+
+            <footer id="footer" class="footer {block:IfNotHeaderFull}{select:Header Alignment}{/block:IfNotHeaderFull}">
+
+                <div class="footer">
+
+                    <section class="links">
+                        <ul>
+                            {block:IfURLFacebook}
+                                <li><a class="genericon genericon-facebook-alt" href="{text:URL Facebook}" target="_blank"></a></li>
+                            {/block:IfURLFacebook}
+                            {block:IfURLGooglePlus}
+                                <li><a class="genericon genericon-googleplus-alt" href="{text:URL Google Plus}" target="_blank"></a></li>
+                            {/block:IfURLGooglePlus}
+                            {block:IfURLInstagram}
+                                <li><a class="genericon genericon-instagram" href="{text:URL Instagram}" target="_blank"></a></li>
+                            {/block:IfURLInstagram}
+                            {block:IfURLLinkedIn}
+                                <li><a class="genericon genericon-linkedin" href="{text:URL LinkedIn}" target="_blank"></a></li>
+                            {/block:IfURLLinkedIn}
+                            {block:IfURLTwitter}
+                                <li><a class="genericon genericon-twitter" href="{text:URL Twitter}" target="_blank"></a></li>
+                            {/block:IfURLTwitter}
+                            {block:IfURLVimeo}
+                                <li><a class="genericon genericon-vimeo" href="{text:URL Vimeo}" target="_blank"></a></li>
+                            {/block:IfURLVimeo}
+                            {block:IfURLYouTube}
+                                <li><a class="genericon genericon-youtube" href="{text:URL YouTube}" target="_blank"></a></li>
+                            {/block:IfURLYouTube}
+                            {block:IfURLDribbble}
+                                <li><a class="genericon genericon-dribbble" href="{text:URL Dribbble}" target="_blank"></a></li>
+                            {/block:IfURLDribbble}
+                            {block:IfURLFlickr}
+                                <li><a class="genericon genericon-flickr" href="{text:URL Flickr}" target="_blank"></a></li>
+                            {/block:IfURLFlickr}
+                            {block:IfURLGitHub}
+                                <li><a class="genericon genericon-github" href="{text:URL GitHub}" target="_blank"></a></li>
+                            {/block:IfURLGitHub}
+                            {block:IfURLPinterest}
+                                <li><a class="genericon genericon-pinterest" href="{text:URL Pinterest}" target="_blank"></a></li>
+                            {/block:IfURLPinterest}
+                            {block:IfURLWebsite}
+                                <li><a class="genericon genericon-website" href="{text:URL Website}" target="_blank"></a></li>
+                            {/block:IfURLWebsite}
+                        </ul>
+                    </section>
+
+                    <section class="copyright">&copy; {CopyrightYears} {Title} &mdash; <a href="http://minimalism-theme.tumblr.com/" target="_blank">Minimalism</a> theme by <a href="http://www.betadeli.com/" target="_blank">BETADELI</a></section>
+
+                </div>
+
+            </footer>
+
+            <div class="{select:Background Overlay}"></div>
+
+        </main>
+
+        <a id="betadeli" href="http://www.betadeli.com/" target="_blank">theme by betadeli</a>
+
+        <script>
+            var minimalism = {
+                "headerPosition": "{select:Header Position}",
+                "headerImageSliding": {block:IfHeaderImageSliding}true{/block:IfHeaderImageSliding}{block:IfNotHeaderImageSliding}false{/block:IfNotHeaderImageSliding},
+                "navigationSticky": {block:IfNavigationSticky}true{/block:IfNavigationSticky}{block:IfNotNavigationSticky}false{/block:IfNotNavigationSticky},
+                "infiniteScrolling": {block:IfInfiniteScrolling}true{/block:IfInfiniteScrolling}{block:IfNotInfiniteScrolling}false{/block:IfNotInfiniteScrolling}
+            };
+        </script>
+        <script src="http://static.tumblr.com/ehhhjdt/7Fro0chhy/minimalism.libs.min.js"></script>
+        <script src="http://static.tumblr.com/ehhhjdt/1Gco0ciwo/minimalism.main.min.js"></script>
+
+    </body>
+</html>
