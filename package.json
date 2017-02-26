@@ -1,0 +1,23 @@
+{
+  "name": "tumblr-theme-minimalism",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "lessc --clean-css static/css/minimalism.less static/css/minimalism.min.css && uglifyjs static/js/minimalism.main.js -o static/js/minimalism.main.min.js --comments /^!/"
+  },
+  "devDependencies": {
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "uglify-js": "^2.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RomansBermans/tumblr-theme-minimalism.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RomansBermans/tumblr-theme-minimalism/issues"
+  },
+  "homepage": "https://github.com/RomansBermans/tumblr-theme-minimalism",
+  "author": "Romans Bermans <romans.bermans@gmail.com>",
+  "license": "ISC"
+}
