@@ -3,12 +3,31 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "lessc --clean-css static/css/minimalism.less static/css/minimalism.min.css && uglifyjs static/js/minimalism.main.js -o static/js/minimalism.main.min.js --comments /^!/"
+    "minify:css": "lessc --clean-css static/css/minimalism.less static/css/minimalism.min.css",
+    "minify:js": "google-closure-compiler-js static/js/minimalism.main.js > static/js/minimalism.main.min.js",
+    "build": "npm run minify:css && npm run minify:js"
   },
   "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "google-closure-compiler-js": "^20170124.0.0",
     "less": "^2.7.2",
-    "less-plugin-clean-css": "^1.5.1",
-    "uglify-js": "^2.7.5"
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "arrow-parens": ["error", "as-needed"],
+      "comma-dangle": ["error", "always-multiline"],
+      "import/no-dynamic-require": "off",
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true}],
+      "max-len": ["error", 240],
+      "no-param-reassign": ["error", { "props": false }]
+    }
   },
   "repository": {
     "type": "git",
