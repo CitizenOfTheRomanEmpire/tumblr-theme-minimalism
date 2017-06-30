@@ -19,6 +19,6 @@ Preview: http://minimalism-theme.tumblr.com
 
 Install: https://www.tumblr.com/theme/39633
 
-Total Installs: 100,000+
+Total Installs: 120,000+
 
-Active Installs: 23,000+
+Active Installs: 25,000+
