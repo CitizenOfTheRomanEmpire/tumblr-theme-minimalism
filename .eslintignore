@@ -1,0 +1,4 @@
+node_modules/
+
+/static/js/minimalism.libs.min.js
+/static/js/minimalism.main.min.js

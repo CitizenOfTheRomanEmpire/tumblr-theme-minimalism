@@ -2,24 +2,24 @@
 
 /*!
 
-Theme Name: Minimalism
-Version: 1.1
+    Theme Name: Minimalism
+    Version: 1.1.0
 
-Author: BETADELI
-Author URI: http://www.betadeli.com/
+    Author: BETADELI
+    Author URI: http://www.betadeli.com/
 
-© 2014-2017
+    © 2014-2018
 
 */
 
 (($, window, Tumblr) => {
-  const minimalism = window.minimalism;
+  const { minimalism } = window;
   const $window = $(window);
   const $document = $(window.document);
 
   /* ** LOADED ** */
   $window.on('load', () =>
-  $('body').removeClass('preload')
+    $('body').removeClass('preload'),
   );
 
   /* ** READY ** */
@@ -27,14 +27,12 @@ Author URI: http://www.betadeli.com/
     /* -------------------- FUNCTIONS -------------------- */
     function $iframes($container, $items) {
       $items.find('.media iframe').parents('.box').css('opacity', '.1').end()
-      .on('load', event => {
-        clearTimeout($container.$isRelayouting);
-        $container.$isRelayouting = setTimeout(() =>
-          $container.masonry('layout')
-        , 500);
+        .on('load', event => {
+          clearTimeout($container.$isRelayouting);
+          $container.$isRelayouting = setTimeout(() => $container.masonry('layout'), 500);
 
-        $(event.target).parents('.box').css('opacity', '1');
-      });
+          $(event.target).parents('.box').css('opacity', '1');
+        });
     }
 
     function $fetch($container, $loader) {
@@ -64,9 +62,9 @@ Author URI: http://www.betadeli.com/
             $loader.removeClass('loading').addClass('loaded');
           }
         })
-        .fail(() =>
-        $loader.removeClass('loading')
-        );
+          .fail(() =>
+            $loader.removeClass('loading'),
+          );
       } else if (!$loader.hasClass('loaded') && !$next.length) {
         $loader.removeClass('loading').addClass('loaded');
       }
@@ -92,17 +90,17 @@ Author URI: http://www.betadeli.com/
 
             let once = true;
             $items.imagesLoaded()
-            .progress(() => {
-              $container.masonry('layout');
+              .progress(() => {
+                $container.masonry('layout');
 
-              if (once) {
-                once = false;
-                $('#content').css('opacity', '1');
-              }
-            })
-            .always(() =>
-            $('#content').css('opacity', '1')
-            );
+                if (once) {
+                  once = false;
+                  $('#content').css('opacity', '1');
+                }
+              })
+              .always(() =>
+                $('#content').css('opacity', '1'),
+              );
           } else {
             $('#content').css('opacity', '1');
           }

@@ -1,24 +1,25 @@
 /*!
 
     Theme Name: Minimalism
-    Version: 1.1
+    Version: 1.1.0
 
     Author: BETADELI
     Author URI: http://www.betadeli.com/
 
-    © 2014-2017
+    © 2014-2018
 
 */
 
 
 /*-------------------- IMPORTS --------------------*/
 
+
 @import "define/lesshat.less";
 @import "define/reset.less";
-@import "define/animations.less";
 
 
 /*-------------------- BASE --------------------*/
+
 
 html,
 body {
@@ -85,6 +86,7 @@ button {
 
 
 /*-------------------- ELEMENTS --------------------*/
+
 
 .preload {
     &.preloader-line {
@@ -875,6 +877,7 @@ button {
 
 /*-------------------- SECTIONS --------------------*/
 
+
 #page {
     height: 100%;
 }
@@ -1212,7 +1215,7 @@ button {
                 display: inline-block;
 
                 &:not(:last-child) {
-                    margin: 0 0.75rem 0 0;
+                    margin: 0 0.75rem 0.75rem 0;
                 }
             }
         }
@@ -1238,7 +1241,16 @@ button {
 }
 
 
+/*-------------------- ANIMATIONS --------------------*/
+
+
+.keyframes(~'fadeIn, from { opacity: 0; } to { opacity: 1; }');
+.keyframes(~'spin, from { transform: rotate(0deg); } to { transform: rotate(360deg); }');
+.keyframes(~'expand, from { width: 0%; margin-left: 0%; } to { width: 100%; margin-left: -50%; }');
+
+
 /*-------------------- MOBILE --------------------*/
+
 
 @media screen and (max-width: 500px) {
 
@@ -1255,12 +1267,6 @@ button {
             }
 
             .content {
-                .heading {
-                    .description {
-                        display: none;
-                    }
-                }
-
                 .navigation-holder {
                     .navigation {
                         .toggle {
