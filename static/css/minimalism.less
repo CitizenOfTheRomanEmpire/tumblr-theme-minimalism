@@ -880,6 +880,18 @@ button {
 
 #page {
     height: 100%;
+
+    .links {
+        font-size: 0;
+
+        li {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin: 0 0.75rem 0.75rem 0;
+            }
+        }
+    }
 }
 
 #header {
@@ -1206,18 +1218,6 @@ button {
         .links,
         .copyright {
             margin: 2rem .75rem;
-        }
-
-        .links {
-            font-size: 0;
-
-            li {
-                display: inline-block;
-
-                &:not(:last-child) {
-                    margin: 0 0.75rem 0.75rem 0;
-                }
-            }
         }
 
         .copyright {
