@@ -4,15 +4,15 @@
   "scripts": {
     "test": "eslint . ",
     "minify:css": "lessc --js --clean-css static/css/minimalism.less static/css/minimalism.min.css",
-    "minify:js": "google-closure-compiler-js static/js/minimalism.main.js > static/js/minimalism.main.min.js",
+    "minify:js": "google-closure-compiler static/js/minimalism.main.js > static/js/minimalism.main.min.js",
     "build": "npm test && npm run minify:css && npm run minify:js"
   },
   "devDependencies": {
-    "eslint": "^4.18.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "google-closure-compiler-js": "^20180204.0.0",
-    "less": "^3.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "google-closure-compiler": "^20190121.0.0",
+    "less": "^3.9.0",
     "less-plugin-clean-css": "^1.5.1"
   },
   "repository": {

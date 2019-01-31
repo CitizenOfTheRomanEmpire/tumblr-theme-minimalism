@@ -5,10 +5,10 @@
     Theme Name: Minimalism
     Version: 1.1.0
 
-    Author: BETADELI
-    Author URI: http://www.betadeli.com/
+    Author: Romans Bermans
+    Author URI: http://linkedin.com/in/romansbermans/
 
-    © 2014-2018
+    © 2014-2019
 
 */
 
@@ -18,9 +18,7 @@
   const $document = $(window.document);
 
   /* ** LOADED ** */
-  $window.on('load', () =>
-    $('body').removeClass('preload'),
-  );
+  $window.on('load', () => $('body').removeClass('preload'));
 
   /* ** READY ** */
   $document.ready(() => {
@@ -62,9 +60,7 @@
             $loader.removeClass('loading').addClass('loaded');
           }
         })
-          .fail(() =>
-            $loader.removeClass('loading'),
-          );
+          .fail(() => $loader.removeClass('loading'));
       } else if (!$loader.hasClass('loaded') && !$next.length) {
         $loader.removeClass('loading').addClass('loaded');
       }
@@ -98,9 +94,7 @@
                   $('#content').css('opacity', '1');
                 }
               })
-              .always(() =>
-                $('#content').css('opacity', '1'),
-              );
+              .always(() => $('#content').css('opacity', '1'));
           } else {
             $('#content').css('opacity', '1');
           }
